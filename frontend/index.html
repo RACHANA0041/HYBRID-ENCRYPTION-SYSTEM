@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGP-Inspired Hybrid Encryption System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 PGP Secure Message System</h1>
+            <p>AES-256-GCM • RSA-2048-OAEP • SHA-512 Digest</p>
+        </header>
+
+        <section class="card">
+            <h2>1. Input Message</h2>
+            <textarea id="messageInput" placeholder="Enter confidential message to encrypt..."></textarea>
+            <button id="encryptBtn" onclick="handleEncrypt()">🔒 Encrypt Message</button>
+        </section>
+
+        <section class="card">
+            <h2>2. Encrypted Package Bundle (JSON)</h2>
+            <textarea id="packageOutput" readonly placeholder="Encrypted package payload will appear here..."></textarea>
+            <div class="btn-group">
+                <button id="decryptBtn" onclick="handleDecrypt()">🔓 Decrypt & Verify</button>
+                <button id="tamperBtn" onclick="handleTamper()">⚠️ Sim. Tamper Attack</button>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>3. Decryption Result</h2>
+            <div id="statusBadge" class="badge">Awaiting input...</div>
+            <textarea id="decryptedOutput" readonly placeholder="Decrypted text output..."></textarea>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
